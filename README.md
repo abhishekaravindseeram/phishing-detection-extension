@@ -71,7 +71,7 @@ TensorFlow / Scikit-learn (if ML integrated)
 
 Clone the repository:
 
-git clone 
+git clone https://github.com/abhishekaravindseeram/phishing-detection-extension.git
 
 Open Chrome → chrome://extensions/
 
