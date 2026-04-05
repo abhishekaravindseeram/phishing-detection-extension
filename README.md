@@ -66,3 +66,17 @@ Chrome Extension APIs
 Python (for ML model – optional)
 
 TensorFlow / Scikit-learn (if ML integrated)
+
+📦 Installation
+
+Clone the repository:
+
+git clone 
+
+Open Chrome → chrome://extensions/
+
+Enable Developer Mode
+
+Click Load unpacked
+
+Select the project folder
