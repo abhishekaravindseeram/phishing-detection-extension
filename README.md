@@ -3,6 +3,7 @@
  
  🚀 Features
 🛡️ Real-Time URL Scanning
+
 Detects suspicious and malicious URLs instantly when a user visits a website.
 🔍 Machine Learning Detection
 Uses trained models to identify phishing patterns based on URL structure and page behavior.
