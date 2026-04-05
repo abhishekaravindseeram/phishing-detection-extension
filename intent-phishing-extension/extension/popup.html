@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <div class="logo-text">
+                    <h1>PhishGuard</h1>
+                    <span class="subtitle">Intent-Aware Protection</span>
+                </div>
+            </div>
+            <div class="status-badge" id="statusBadge">
+                <span class="status-dot"></span>
+                <span class="status-text">Analyzing</span>
+            </div>
+        </header>
+
+        <!-- Current URL Section -->
+        <section class="url-section">
+            <label class="section-label">Analyzing URL</label>
+            <div class="url-display" id="currentUrl">
+                <span class="url-text">Loading...</span>
+            </div>
+        </section>
+
+        <!-- Risk Score Display -->
+        <section class="risk-section">
+            <div class="risk-gauge">
+                <div class="risk-circle" id="riskCircle">
+                    <div class="risk-inner">
+                        <span class="risk-score" id="riskScore">--</span>
+                        <span class="risk-label">Risk Score</span>
+                    </div>
+                </div>
+            </div>
+            <div class="risk-bar-container">
+                <div class="risk-bar">
+                    <div class="risk-fill" id="riskFill"></div>
+                </div>
+                <div class="risk-zones">
+                    <span class="zone safe">0-29 SAFE</span>
+                    <span class="zone warn">30-69 WARN</span>
+                    <span class="zone block">70-100 BLOCK</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decision Banner -->
+        <section class="decision-section" id="decisionSection">
+            <div class="decision-banner" id="decisionBanner">
+                <span class="decision-icon" id="decisionIcon">⏳</span>
+                <div class="decision-text">
+                    <h2 id="decisionTitle">Analyzing...</h2>
+                    <p id="decisionDesc">Please wait while we analyze this URL</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attack Classification -->
+        <section class="attack-section" id="attackSection" style="display: none;">
+            <h3 class="section-title">🎯 Attack Type Detected</h3>
+            <div class="attack-cards" id="attackCards">
+                <!-- Attack cards will be inserted here -->
+            </div>
+        </section>
+
+        <!-- Risk Factors -->
+        <section class="factors-section">
+            <h3 class="section-title">⚠️ Risk Factors</h3>
+            <div class="factors-list" id="factorsList">
+                <div class="factor-item empty">No risk factors detected</div>
+            </div>
+        </section>
+
+        <!-- URL Breakdown -->
+        <section class="breakdown-section">
+            <h3 class="section-title">🔍 URL Analysis</h3>
+            <div class="breakdown-display" id="urlBreakdown">
+                <div class="breakdown-part">
+                    <span class="part-label">Protocol</span>
+                    <span class="part-value" id="partProtocol">--</span>
+                </div>
+                <div class="breakdown-part">
+                    <span class="part-label">Domain</span>
+                    <span class="part-value" id="partDomain">--</span>
+                </div>
+                <div class="breakdown-part">
+                    <span class="part-label">Path</span>
+                    <span class="part-value" id="partPath">--</span>
+                </div>
+            </div>
+            <div class="highlighted-url" id="highlightedUrl">
+                <!-- Highlighted URL will be shown here -->
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section class="recommendations-section">
+            <h3 class="section-title">💡 Safety Tips</h3>
+            <ul class="recommendations-list" id="recommendationsList">
+                <li class="recommendation-item">Always verify URLs before entering credentials</li>
+                <li class="recommendation-item">Enable two-factor authentication</li>
+            </ul>
+        </section>
+
+        <!-- Action Buttons -->
+        <section class="actions-section">
+            <button class="action-btn secondary" id="btnViewDetails">
+                📊 Full Report
+            </button>
+            <button class="action-btn secondary" id="btnShare">
+                🔗 Share Report
+            </button>
+        </section>
+
+        <!-- Stats Footer -->
+        <footer class="stats-footer">
+            <div class="stat-item">
+                <span class="stat-value" id="statBlocked">0</span>
+                <span class="stat-label">Blocked</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="statWarned">0</span>
+                <span class="stat-label">Warned</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="statAllowed">0</span>
+                <span class="stat-label">Allowed</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
